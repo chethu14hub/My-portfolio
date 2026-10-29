@@ -6,26 +6,26 @@
    ============================================ */
 
 /* ─── Constants ─── */
-const TOTAL_FRAMES   = 120;   // use first 120 frames — cuts the tail end off
-const FRAME_PATH     = (n) => `portfolio-assets/ezgif-frame-${String(n).padStart(3,'0')}.jpg`;
-const SCROLL_PAGES   = 2;     // 2× viewport height of scroll to finish animation
+const TOTAL_FRAMES = 120;   // use first 120 frames — cuts the tail end off
+const FRAME_PATH = (n) => `portfolio-assets/ezgif-frame-${String(n).padStart(3, '0')}.jpg`;
+const SCROLL_PAGES = 2;     // 2× viewport height of scroll to finish animation
 
 /* ─────────────────────────────────────────────
    SCROLL-DRIVEN FRAME ANIMATOR
    ─────────────────────────────────────────── */
 class ScrollFrameAnimator {
   constructor(canvasId) {
-    this.canvas     = document.getElementById(canvasId);
-    this.ctx        = this.canvas.getContext('2d');
-    this.frames     = new Array(TOTAL_FRAMES);   // sparse array, filled as images load
+    this.canvas = document.getElementById(canvasId);
+    this.ctx = this.canvas.getContext('2d');
+    this.frames = new Array(TOTAL_FRAMES);   // sparse array, filled as images load
     this.loadedCount = 0;
     this.currentFrame = 0;
-    this.targetFrame  = 0;
-    this.rafId        = null;
-    this.isReady      = false;   // true once at least frame 0 is loaded
+    this.targetFrame = 0;
+    this.rafId = null;
+    this.isReady = false;   // true once at least frame 0 is loaded
 
     this.progressFill = document.getElementById('frame-progress-fill');
-    this.container    = document.getElementById('hero-scroll-container');
+    this.container = document.getElementById('hero-scroll-container');
     this.scrollIndicator = document.querySelector('.scroll-indicator');
 
     // Set CSS variable so container height is correct
@@ -41,7 +41,7 @@ class ScrollFrameAnimator {
   /* ── Resize canvas to wrapper ── */
   _resize() {
     const wrapper = this.canvas.parentElement;
-    this.canvas.width  = wrapper.clientWidth;
+    this.canvas.width = wrapper.clientWidth;
     this.canvas.height = wrapper.clientHeight;
     // Redraw current frame after resize
     if (this.frames[Math.round(this.currentFrame)]) {
@@ -76,16 +76,16 @@ class ScrollFrameAnimator {
   _onScroll() {
     if (!this.container) return;
 
-    const containerTop    = this.container.offsetTop;
+    const containerTop = this.container.offsetTop;
     const containerHeight = this.container.offsetHeight;   // SCROLL_PAGES * 100vh
-    const viewportHeight  = window.innerHeight;
-    const scrollY         = window.scrollY;
+    const viewportHeight = window.innerHeight;
+    const scrollY = window.scrollY;
 
     // How far have we scrolled INTO the hero zone?
     // scrollable distance = containerHeight - viewportHeight
     const scrollable = containerHeight - viewportHeight;
-    const scrolled   = Math.max(0, scrollY - containerTop);
-    const progress   = Math.min(1, scrolled / scrollable);  // 0 → 1
+    const scrolled = Math.max(0, scrollY - containerTop);
+    const progress = Math.min(1, scrolled / scrollable);  // 0 → 1
 
     // Map progress to frame index
     this.targetFrame = Math.round(progress * (TOTAL_FRAMES - 1));
@@ -104,12 +104,12 @@ class ScrollFrameAnimator {
   /* ── Draw a single image covering the canvas (object-fit: cover) ── */
   _drawFrame(img) {
     const { canvas, ctx } = this;
-    const iw = img.naturalWidth  || img.width  || 1;
+    const iw = img.naturalWidth || img.width || 1;
     const ih = img.naturalHeight || img.height || 1;
     const scale = Math.max(canvas.width / iw, canvas.height / ih);
     const dw = iw * scale;
     const dh = ih * scale;
-    const dx = (canvas.width  - dw) / 2;
+    const dx = (canvas.width - dw) / 2;
     const dy = (canvas.height - dh) / 2;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(img, dx, dy, dw, dh);
@@ -142,8 +142,8 @@ class ScrollFrameAnimator {
    ─────────────────────────────────────────── */
 class ParticleSystem {
   constructor(canvasId) {
-    this.canvas  = document.getElementById(canvasId);
-    this.ctx     = this.canvas.getContext('2d');
+    this.canvas = document.getElementById(canvasId);
+    this.ctx = this.canvas.getContext('2d');
     this.particles = [];
     this._resize();
     window.addEventListener('resize', () => this._resize());
@@ -152,7 +152,7 @@ class ParticleSystem {
   }
 
   _resize() {
-    this.canvas.width  = window.innerWidth;
+    this.canvas.width = window.innerWidth;
     this.canvas.height = window.innerHeight;
   }
 
@@ -160,11 +160,11 @@ class ParticleSystem {
     const count = Math.floor((this.canvas.width * this.canvas.height) / 18000);
     for (let i = 0; i < count; i++) {
       this.particles.push({
-        x:     Math.random() * this.canvas.width,
-        y:     Math.random() * this.canvas.height,
-        r:     Math.random() * 1.5 + 0.3,
-        vx:    (Math.random() - 0.5) * 0.35,
-        vy:    (Math.random() - 0.5) * 0.35,
+        x: Math.random() * this.canvas.width,
+        y: Math.random() * this.canvas.height,
+        r: Math.random() * 1.5 + 0.3,
+        vx: (Math.random() - 0.5) * 0.35,
+        vy: (Math.random() - 0.5) * 0.35,
         alpha: Math.random() * 0.5 + 0.1,
       });
     }
@@ -176,7 +176,7 @@ class ParticleSystem {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     this.particles.forEach(p => {
       p.x += p.vx; p.y += p.vy;
-      if (p.x < 0 || p.x > canvas.width)  p.vx *= -1;
+      if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
       if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
@@ -190,8 +190,8 @@ class ParticleSystem {
    NAVBAR
    ─────────────────────────────────────────── */
 function initNavbar() {
-  const nav  = document.getElementById('navbar');
-  const ham  = document.getElementById('hamburger');
+  const nav = document.getElementById('navbar');
+  const ham = document.getElementById('hamburger');
   const menu = document.getElementById('mobileMenu');
 
   window.addEventListener('scroll', () => {
@@ -214,7 +214,7 @@ function initNavbar() {
 
   // Active section highlight
   const sections = document.querySelectorAll('section[id]');
-  const navLinks  = document.querySelectorAll('.nav-link');
+  const navLinks = document.querySelectorAll('.nav-link');
 
   const obs = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -268,10 +268,10 @@ function initCounters() {
   const obs = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        const el     = entry.target;
+        const el = entry.target;
         const target = parseInt(el.dataset.count, 10);
-        const step   = target / (1500 / 16);
-        let current  = 0;
+        const step = target / (1500 / 16);
+        let current = 0;
         const tick = () => {
           current += step;
           if (current < target) { el.textContent = Math.floor(current); requestAnimationFrame(tick); }
@@ -306,7 +306,7 @@ function initCursorGlow() {
   document.body.appendChild(glow);
   document.addEventListener('mousemove', (e) => {
     glow.style.left = e.clientX + 'px';
-    glow.style.top  = e.clientY + 'px';
+    glow.style.top = e.clientY + 'px';
   });
 }
 
@@ -317,8 +317,8 @@ function initTilt() {
   document.querySelectorAll('.project-card, .skill-card').forEach(card => {
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
-      const dx = ((e.clientX - rect.left) / rect.width  - 0.5) * 2;
-      const dy = ((e.clientY - rect.top)  / rect.height - 0.5) * 2;
+      const dx = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+      const dy = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
       card.style.transform = `perspective(800px) rotateY(${dx * 6}deg) rotateX(${-dy * 6}deg) translateY(-4px)`;
     });
     card.addEventListener('mouseleave', () => { card.style.transform = ''; });
@@ -330,7 +330,7 @@ function initTilt() {
    ─────────────────────────────────────────── */
 function initForm() {
   const form = document.getElementById('contactForm');
-  const btn  = document.getElementById('submitBtn');
+  const btn = document.getElementById('submitBtn');
   if (!form) return;
 
   form.addEventListener('submit', (e) => {
@@ -369,7 +369,7 @@ function initSmoothScroll() {
    TYPEWRITER (hero role)
    ─────────────────────────────────────────── */
 function initTypeWriter() {
-  const roles = ['Creative Developer', 'UI/UX Designer', 'Frontend Engineer', 'Full Stack Builder'];
+  const roles = ['UI/UX Designer', 'Graphic Designer', 'Frontend Developer', 'Vibe Coder'];
   const el = document.querySelector('.hero-title .line-reveal:last-child');
   if (!el) return;
 

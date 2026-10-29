@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chethan | Creative Developer</title>
-  <meta name="description" content="Portfolio of Chethan — Creative Developer crafting stunning digital experiences with code and design." />
+  <meta name="description"
+    content="Portfolio of Chethan — Creative Developer crafting stunning digital experiences with code and design." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+
+  <!-- ========= NAV ========= -->
 
   <!-- ========= NAV ========= -->
   <nav id="navbar">
     <div class="nav-logo">
       <span class="logo-bracket">&lt;</span>Chethan<span class="logo-bracket">/&gt;</span>
     </div>
+
     <ul class="nav-links">
       <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
-      <li><a href="#about" class="nav-link" data-section="about">About</a></li>
-      <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+      <li><a href="#about" class="nav-link" data-section="about">About Me</a></li>
+      <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
       <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+      <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
       <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
     </ul>
+
     <a href="#contact" class="nav-cta">Hire Me</a>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </nav>
@@ -34,76 +45,83 @@
   <div class="mobile-menu" id="mobileMenu">
     <ul>
       <li><a href="#hero" class="mobile-link">Home</a></li>
-      <li><a href="#about" class="mobile-link">About</a></li>
-      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#about" class="mobile-link">About Me</a></li>
+      <li><a href="#experience" class="mobile-link">Experience</a></li>
       <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
       <li><a href="#contact" class="mobile-link">Contact</a></li>
     </ul>
   </div>
 
+
   <!-- ========= HERO SCROLL CONTAINER ========= -->
   <div id="hero-scroll-container">
-  <!-- ========= HERO ========= -->
-  <section id="hero">
-    <!-- Animated canvas background particles -->
-    <canvas id="particleCanvas"></canvas>
+    <!-- ========= HERO ========= -->
+    <section id="hero">
+      <!-- Animated canvas background particles -->
+      <canvas id="particleCanvas"></canvas>
 
-    <!-- Frame-sequence animation -->
-    <div class="hero-animation-wrapper">
-      <canvas id="frameCanvas"></canvas>
-    </div>
+      <!-- Frame-sequence animation -->
+      <div class="hero-animation-wrapper">
+        <canvas id="frameCanvas"></canvas>
+      </div>
 
-    <!-- Hero text -->
-    <div class="hero-content">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        Available for work
-      </div>
-      <h1 class="hero-title">
-        <span class="line-reveal" data-delay="0">Hi, I'm</span>
-        <span class="line-reveal name-gradient" data-delay="200">Chethan</span>
-        <span class="line-reveal" data-delay="400">Creative Developer</span>
-      </h1>
-      <p class="hero-subtitle line-reveal" data-delay="600">
-        I craft <em>stunning digital experiences</em> that live at the intersection<br/>
-        of beautiful design and clean, powerful code.
-      </p>
-      <div class="hero-buttons line-reveal" data-delay="800">
-        <a href="#projects" class="btn-primary">
-          <span>View My Work</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <a href="#contact" class="btn-outline">Let's Talk</a>
-      </div>
-      <div class="hero-stats line-reveal" data-delay="1000">
-        <div class="stat">
-          <span class="stat-num" data-count="25">0</span><span>+</span>
-          <span class="stat-label">Projects</span>
+      <!-- Hero text -->
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Available for work
         </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num" data-count="3">0</span><span>+</span>
-          <span class="stat-label">Years Exp</span>
+        <h1 class="hero-title">
+          <span class="line-reveal" data-delay="0">Hi, I'm</span>
+          <span class="line-reveal name-gradient" data-delay="200">Chethan</span>
+          <span class="line-reveal" data-delay="400">Creative Developer</span>
+        </h1>
+        <p class="hero-subtitle line-reveal" data-delay="600">
+          Hello! ,I'm Chethan, an MCA student and tech enthusiast passionate about frontend development, UI/UX, and
+          graphic design. I also love videography and video editing, combining creativity and technology to bring ideas
+          to life.
+        </p>
+        <div class="hero-buttons line-reveal" data-delay="800">
+          <a href="#projects" class="btn-primary">
+            <span>View My Work</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="#contact" class="btn-outline">Let's Talk</a>
         </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num" data-count="100">0</span><span>%</span>
-          <span class="stat-label">Passion</span>
+        <div class="hero-stats line-reveal" data-delay="1000">
+          <div class="stat">
+            <span class="stat-num" data-count="25">0</span><span>+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num" data-count="3">0</span><span>+</span>
+            <span class="stat-label">Years Exp</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num" data-count="100">0</span><span>%</span>
+            <span class="stat-label">Passion</span>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Frame progress bar -->
-    <div id="frame-progress-bar"><div id="frame-progress-fill"></div></div>
-
-    <!-- Scroll indicator -->
-    <div class="scroll-indicator">
-      <div class="scroll-mouse">
-        <div class="scroll-wheel"></div>
+      <!-- Frame progress bar -->
+      <div id="frame-progress-bar">
+        <div id="frame-progress-fill"></div>
       </div>
-      <span>Scroll Down</span>
-    </div>
-  </section>
+
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator">
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+        <span>Scroll Down</span>
+      </div>
+    </section>
   </div><!-- end #hero-scroll-container -->
 
   <!-- ========= ABOUT ========= -->
@@ -116,14 +134,19 @@
             <img src="portfolio-assets/ezgif-frame-120.jpg" alt="Chethan" class="about-photo" />
             <div class="about-glow"></div>
             <div class="about-card floating">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+              </svg>
               <div>
                 <span class="card-num">25+</span>
                 <span class="card-label">Projects Done</span>
               </div>
             </div>
             <div class="about-card-2 floating-alt">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
               <div>
                 <span class="card-num">3+ Yrs</span>
                 <span class="card-label">Experience</span>
@@ -133,8 +156,10 @@
         </div>
         <div class="about-text reveal">
           <h2>Passionate about building<br /><span class="text-gradient">digital masterpieces</span></h2>
-          <p>I'm a creative developer with a deep love for crafting experiences that are both visually stunning and functionally flawless. I blend the worlds of design and development to bring ideas to life.</p>
-          <p>Whether it's an interactive web app, a motion-rich UI, or a full-stack product — I'm always pushing the boundaries of what's possible on the web.</p>
+          <p>I'm a creative developer with a deep love for crafting experiences that are both visually stunning and
+            functionally flawless. I blend the worlds of design and development to bring ideas to life.</p>
+          <p>Whether it's an interactive web app, a motion-rich UI, or a full-stack product — I'm always pushing the
+            boundaries of what's possible on the web.</p>
           <div class="about-highlights">
             <div class="highlight-item">
               <span class="highlight-icon">🎨</span>
@@ -160,10 +185,26 @@
           </div>
           <a href="#contact" class="btn-primary">
             <span>Get In Touch</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
           </a>
         </div>
       </div>
+    </div>
+  </section>
+
+
+  <!-- ========= EXPERIENCE ========= -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-tag reveal">Experience</div>
+      <h2 class="section-title reveal">
+        My <span class="text-gradient">Experience</span>
+      </h2>
+      <p class="section-subtitle reveal">
+        My journey in development, design, and technology.
+      </p>
     </div>
   </section>
 
@@ -172,65 +213,106 @@
     <div class="container">
       <div class="section-tag reveal">Tech Stack</div>
       <h2 class="section-title reveal">Skills & <span class="text-gradient">Technologies</span></h2>
-      <p class="section-subtitle reveal">I work with a wide range of modern technologies to build exceptional products.</p>
+      <p class="section-subtitle reveal">I work with a wide range of modern technologies to build exceptional products.
+      </p>
 
       <div class="skills-grid reveal">
         <!-- Row 1 -->
         <div class="skill-card" data-skill="HTML5">
           <div class="skill-icon" style="background: linear-gradient(135deg, #e34c26, #f06529);">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.055.003.233-2.622L5.259 4.117l.699 8.272 8.9.001-.374 3.97L12 17.288l-2.48-.681-.16-1.815H7.308l.32 3.708 4.37 1.223 4.22-1.173.38-4.186.406-4.506H8.531z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.055.003.233-2.622L5.259 4.117l.699 8.272 8.9.001-.374 3.97L12 17.288l-2.48-.681-.16-1.815H7.308l.32 3.708 4.37 1.223 4.22-1.173.38-4.186.406-4.506H8.531z" />
+            </svg>
           </div>
           <span>HTML5</span>
-          <div class="skill-bar"><div class="skill-fill" data-pct="95"></div></div>
+          <div class="skill-bar">
+            <div class="skill-fill" data-pct="95"></div>
+          </div>
         </div>
         <div class="skill-card" data-skill="CSS3">
           <div class="skill-icon" style="background: linear-gradient(135deg, #264de4, #2965f1);">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z" />
+            </svg>
           </div>
           <span>CSS3</span>
-          <div class="skill-bar"><div class="skill-fill" data-pct="90"></div></div>
+          <div class="skill-bar">
+            <div class="skill-fill" data-pct="90"></div>
+          </div>
         </div>
         <div class="skill-card" data-skill="JavaScript">
           <div class="skill-icon" style="background: linear-gradient(135deg, #f7df1e, #f0db4f); color: #000;">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z" />
+            </svg>
           </div>
           <span>JavaScript</span>
-          <div class="skill-bar"><div class="skill-fill" data-pct="88"></div></div>
+          <div class="skill-bar">
+            <div class="skill-fill" data-pct="88"></div>
+          </div>
         </div>
         <div class="skill-card" data-skill="React">
           <div class="skill-icon" style="background: linear-gradient(135deg, #00d8ff44, #00d8ff22);">
-            <svg viewBox="0 0 24 24" fill="currentColor" style="color:#00d8ff"><path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38a2.167 2.167 0 0 0-1.092-.278zm-.005 1.09c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44a23.476 23.476 0 0 0-3.107-.534A23.892 23.892 0 0 0 12 9.692a23.518 23.518 0 0 0-1.9-1.465c.22-.078.442-.149.668-.207.937-.24 1.896-.332 2.77-.332zm-9.229 2.12c.016 0 .03.001.046.001.938 0 2.07.5 3.28 1.422a23.25 23.25 0 0 0-2.113 2.072 23.248 23.248 0 0 0-3.14.59c-.09-.394-.165-.787-.22-1.168-.39-2.015-.07-3.51.704-3.963a1.13 1.13 0 0 1 .443-.096v.143zm13.045 2.554c1.128.65 1.888 1.435 1.888 2.25 0 1.01-1.137 2.052-2.873 2.74-.27-.855-.602-1.739-.992-2.632.39-.892.72-1.773.978-2.63-.003.003.0 .275 0 .272zm-15.84.226c.26.85.59 1.728.98 2.62-.387.894-.716 1.775-.975 2.624-1.717-.684-2.83-1.715-2.83-2.726 0-.83.78-1.626 1.947-2.27.28.08.574.155.878.224v.002 0 .127zm1.19 5.5c.61.087 1.24.143 1.887.17a23.67 23.67 0 0 0 1.872 2.242c-1.424 1.266-2.793 1.96-3.717 1.456-.716-.414-1.005-1.765-.707-3.596.187-.027.375-.052.563-.08v.001-.193zm11.334 2.07c.31 2.001-.008 3.483-.73 3.908-.156.09-.346.135-.562.135-.833 0-1.88-.534-2.983-1.437a23.36 23.36 0 0 0 1.866-2.235 22.63 22.63 0 0 0 1.95-.253c.155.636.265 1.254.33 1.845v-.073l.13.11z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" style="color:#00d8ff">
+              <path
+                d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38a2.167 2.167 0 0 0-1.092-.278zm-.005 1.09c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44a23.476 23.476 0 0 0-3.107-.534A23.892 23.892 0 0 0 12 9.692a23.518 23.518 0 0 0-1.9-1.465c.22-.078.442-.149.668-.207.937-.24 1.896-.332 2.77-.332zm-9.229 2.12c.016 0 .03.001.046.001.938 0 2.07.5 3.28 1.422a23.25 23.25 0 0 0-2.113 2.072 23.248 23.248 0 0 0-3.14.59c-.09-.394-.165-.787-.22-1.168-.39-2.015-.07-3.51.704-3.963a1.13 1.13 0 0 1 .443-.096v.143zm13.045 2.554c1.128.65 1.888 1.435 1.888 2.25 0 1.01-1.137 2.052-2.873 2.74-.27-.855-.602-1.739-.992-2.632.39-.892.72-1.773.978-2.63-.003.003.0 .275 0 .272zm-15.84.226c.26.85.59 1.728.98 2.62-.387.894-.716 1.775-.975 2.624-1.717-.684-2.83-1.715-2.83-2.726 0-.83.78-1.626 1.947-2.27.28.08.574.155.878.224v.002 0 .127zm1.19 5.5c.61.087 1.24.143 1.887.17a23.67 23.67 0 0 0 1.872 2.242c-1.424 1.266-2.793 1.96-3.717 1.456-.716-.414-1.005-1.765-.707-3.596.187-.027.375-.052.563-.08v.001-.193zm11.334 2.07c.31 2.001-.008 3.483-.73 3.908-.156.09-.346.135-.562.135-.833 0-1.88-.534-2.983-1.437a23.36 23.36 0 0 0 1.866-2.235 22.63 22.63 0 0 0 1.95-.253c.155.636.265 1.254.33 1.845v-.073l.13.11z" />
+            </svg>
           </div>
           <span>React</span>
-          <div class="skill-bar"><div class="skill-fill" data-pct="82"></div></div>
+          <div class="skill-bar">
+            <div class="skill-fill" data-pct="82"></div>
+          </div>
         </div>
         <div class="skill-card" data-skill="Node.js">
           <div class="skill-icon" style="background: linear-gradient(135deg, #3c873a, #68a063);">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.998 24c-.321 0-.641-.084-.922-.247l-2.936-1.737c-.438-.245-.224-.332-.08-.382.585-.203.703-.25 1.328-.604.065-.037.151-.023.218.017l2.256 1.339c.082.045.197.045.272 0l8.795-5.076c.082-.047.134-.141.134-.238V6.921c0-.099-.051-.19-.137-.241l-8.791-5.072c-.081-.047-.189-.047-.271 0L3.075 6.68c-.087.05-.139.143-.139.241v10.15c0 .097.052.19.139.235l2.409 1.392c1.307.654 2.108-.116 2.108-.891V7.787c0-.142.114-.253.256-.253h1.115c.139 0 .255.111.255.253v10.021c0 1.745-.95 2.745-2.604 2.745-.508 0-.909 0-2.026-.551L2.28 18.675a1.86 1.86 0 0 1-.92-1.609V6.921c0-.663.354-1.278.92-1.609l8.795-5.078a1.864 1.864 0 0 1 1.844 0l8.794 5.078c.566.331.921.946.921 1.609v10.145c0 .662-.355 1.275-.921 1.609l-8.794 5.078a1.868 1.868 0 0 1-.921.247z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M11.998 24c-.321 0-.641-.084-.922-.247l-2.936-1.737c-.438-.245-.224-.332-.08-.382.585-.203.703-.25 1.328-.604.065-.037.151-.023.218.017l2.256 1.339c.082.045.197.045.272 0l8.795-5.076c.082-.047.134-.141.134-.238V6.921c0-.099-.051-.19-.137-.241l-8.791-5.072c-.081-.047-.189-.047-.271 0L3.075 6.68c-.087.05-.139.143-.139.241v10.15c0 .097.052.19.139.235l2.409 1.392c1.307.654 2.108-.116 2.108-.891V7.787c0-.142.114-.253.256-.253h1.115c.139 0 .255.111.255.253v10.021c0 1.745-.95 2.745-2.604 2.745-.508 0-.909 0-2.026-.551L2.28 18.675a1.86 1.86 0 0 1-.92-1.609V6.921c0-.663.354-1.278.92-1.609l8.795-5.078a1.864 1.864 0 0 1 1.844 0l8.794 5.078c.566.331.921.946.921 1.609v10.145c0 .662-.355 1.275-.921 1.609l-8.794 5.078a1.868 1.868 0 0 1-.921.247z" />
+            </svg>
           </div>
           <span>Node.js</span>
-          <div class="skill-bar"><div class="skill-fill" data-pct="75"></div></div>
+          <div class="skill-bar">
+            <div class="skill-fill" data-pct="75"></div>
+          </div>
         </div>
         <div class="skill-card" data-skill="Python">
           <div class="skill-icon" style="background: linear-gradient(135deg, #3572a5, #ffde57);">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.914 0C5.82 0 6.2 2.656 6.2 2.656l.007 2.752h5.814v.826H3.9S0 5.789 0 11.969c0 6.18 3.403 5.963 3.403 5.963h2.031v-2.869s-.109-3.403 3.351-3.403h5.766s3.24.052 3.24-3.132V3.302S18.28 0 11.914 0zM8.708 1.909a1.034 1.034 0 1 1 0 2.069 1.034 1.034 0 0 1 0-2.069zM12 24c6.094 0 5.714-2.656 5.714-2.656l-.007-2.752H11.893v-.826h8.121S24 18.211 24 12.031c0-6.18-3.403-5.963-3.403-5.963h-2.031v2.869s.109 3.403-3.351 3.403H9.449s-3.24-.052-3.24 3.132v5.226S5.72 24 12.086 24H12zm3.206-1.909a1.034 1.034 0 1 1 0-2.069 1.034 1.034 0 0 1 0 2.069z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M11.914 0C5.82 0 6.2 2.656 6.2 2.656l.007 2.752h5.814v.826H3.9S0 5.789 0 11.969c0 6.18 3.403 5.963 3.403 5.963h2.031v-2.869s-.109-3.403 3.351-3.403h5.766s3.24.052 3.24-3.132V3.302S18.28 0 11.914 0zM8.708 1.909a1.034 1.034 0 1 1 0 2.069 1.034 1.034 0 0 1 0-2.069zM12 24c6.094 0 5.714-2.656 5.714-2.656l-.007-2.752H11.893v-.826h8.121S24 18.211 24 12.031c0-6.18-3.403-5.963-3.403-5.963h-2.031v2.869s.109 3.403-3.351 3.403H9.449s-3.24-.052-3.24 3.132v5.226S5.72 24 12.086 24H12zm3.206-1.909a1.034 1.034 0 1 1 0-2.069 1.034 1.034 0 0 1 0 2.069z" />
+            </svg>
           </div>
           <span>Python</span>
-          <div class="skill-bar"><div class="skill-fill" data-pct="78"></div></div>
+          <div class="skill-bar">
+            <div class="skill-fill" data-pct="78"></div>
+          </div>
         </div>
         <div class="skill-card" data-skill="Figma">
           <div class="skill-icon" style="background: linear-gradient(135deg, #a259ff, #f24e1e);">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.354-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.019 3.019 3.019h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.019 3.019 3.019h3.117V8.981H8.148zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49s2.026-4.49 4.515-4.49c2.489 0 4.515 2.014 4.515 4.49S10.661 24 8.172 24zm0-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.019 3.019 3.019 3.019-1.355 3.019-3.019-1.354-3.019-3.019-3.019zm7.856-4.471h-.001c-2.502 0-4.515-2.014-4.515-4.49S13.527 7.53 16.029 7.53s4.515 2.014 4.515 4.49-2.014 4.49-4.515 4.49zm0-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.019 3.019 3.019 3.019-1.355 3.019-3.019-1.354-3.019-3.019-3.019z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.354-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.019 3.019 3.019h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.019 3.019 3.019h3.117V8.981H8.148zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49s2.026-4.49 4.515-4.49c2.489 0 4.515 2.014 4.515 4.49S10.661 24 8.172 24zm0-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.019 3.019 3.019 3.019-1.355 3.019-3.019-1.354-3.019-3.019-3.019zm7.856-4.471h-.001c-2.502 0-4.515-2.014-4.515-4.49S13.527 7.53 16.029 7.53s4.515 2.014 4.515 4.49-2.014 4.49-4.515 4.49zm0-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.019 3.019 3.019 3.019-1.355 3.019-3.019-1.354-3.019-3.019-3.019z" />
+            </svg>
           </div>
           <span>Figma</span>
-          <div class="skill-bar"><div class="skill-fill" data-pct="85"></div></div>
+          <div class="skill-bar">
+            <div class="skill-fill" data-pct="85"></div>
+          </div>
         </div>
         <div class="skill-card" data-skill="Git">
           <div class="skill-icon" style="background: linear-gradient(135deg, #f05033, #f34f29);">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.546 10.93 13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.6-.401-.545-.545-.676-1.342-.396-2.009L7.636 3.67 .45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M23.546 10.93 13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.6-.401-.545-.545-.676-1.342-.396-2.009L7.636 3.67 .45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187" />
+            </svg>
           </div>
           <span>Git</span>
-          <div class="skill-bar"><div class="skill-fill" data-pct="80"></div></div>
+          <div class="skill-bar">
+            <div class="skill-fill" data-pct="80"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -241,24 +323,35 @@
     <div class="container">
       <div class="section-tag reveal">My Work</div>
       <h2 class="section-title reveal">Featured <span class="text-gradient">Projects</span></h2>
-      <p class="section-subtitle reveal">A curated selection of my best work across web development, design, and creative coding.</p>
+      <p class="section-subtitle reveal">A curated selection of my best work across web development, design, and
+        creative coding.</p>
 
       <div class="projects-grid">
         <div class="project-card reveal" data-index="0">
           <div class="project-img-wrapper">
-            <div class="project-placeholder" style="background: linear-gradient(135deg, #1a0a0a 0%, #3d0000 50%, #1a0000 100%);">
+            <div class="project-placeholder"
+              style="background: linear-gradient(135deg, #1a0a0a 0%, #3d0000 50%, #1a0000 100%);">
               <div class="project-lines">
-                <div class="p-line"></div><div class="p-line"></div><div class="p-line"></div>
+                <div class="p-line"></div>
+                <div class="p-line"></div>
+                <div class="p-line"></div>
               </div>
               <div class="project-code">&lt;/&gt;</div>
             </div>
             <div class="project-overlay">
               <div class="project-links">
                 <a href="#" class="project-link" aria-label="Live Demo">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
                 </a>
                 <a href="#" class="project-link" aria-label="GitHub">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -270,13 +363,15 @@
               <span class="tag">MongoDB</span>
             </div>
             <h3>E-Commerce Platform</h3>
-            <p>A full-stack e-commerce solution with real-time inventory management, dynamic cart, and seamless payment integration.</p>
+            <p>A full-stack e-commerce solution with real-time inventory management, dynamic cart, and seamless payment
+              integration.</p>
           </div>
         </div>
 
         <div class="project-card reveal" data-index="1">
           <div class="project-img-wrapper">
-            <div class="project-placeholder" style="background: linear-gradient(135deg, #0a0a1a 0%, #00003d 50%, #000a1a 100%);">
+            <div class="project-placeholder"
+              style="background: linear-gradient(135deg, #0a0a1a 0%, #00003d 50%, #000a1a 100%);">
               <div class="project-lines">
                 <div class="p-line" style="width:70%"></div>
                 <div class="p-line" style="width:90%"></div>
@@ -287,10 +382,17 @@
             <div class="project-overlay">
               <div class="project-links">
                 <a href="#" class="project-link" aria-label="Live Demo">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
                 </a>
                 <a href="#" class="project-link" aria-label="GitHub">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -302,13 +404,15 @@
               <span class="tag">FastAPI</span>
             </div>
             <h3>AI Content Generator</h3>
-            <p>An intelligent content creation tool powered by machine learning that generates creative copy, headlines, and social posts.</p>
+            <p>An intelligent content creation tool powered by machine learning that generates creative copy, headlines,
+              and social posts.</p>
           </div>
         </div>
 
         <div class="project-card reveal" data-index="2">
           <div class="project-img-wrapper">
-            <div class="project-placeholder" style="background: linear-gradient(135deg, #0a1a0a 0%, #003d00 50%, #001a00 100%);">
+            <div class="project-placeholder"
+              style="background: linear-gradient(135deg, #0a1a0a 0%, #003d00 50%, #001a00 100%);">
               <div class="project-lines">
                 <div class="p-line" style="width:85%"></div>
                 <div class="p-line" style="width:60%"></div>
@@ -319,10 +423,17 @@
             <div class="project-overlay">
               <div class="project-links">
                 <a href="#" class="project-link" aria-label="Live Demo">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
                 </a>
                 <a href="#" class="project-link" aria-label="GitHub">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -334,7 +445,8 @@
               <span class="tag">Redux</span>
             </div>
             <h3>Fitness Tracker App</h3>
-            <p>A cross-platform mobile app with workout logging, progress analytics, personalized routines, and social challenges.</p>
+            <p>A cross-platform mobile app with workout logging, progress analytics, personalized routines, and social
+              challenges.</p>
           </div>
         </div>
       </div>
@@ -351,7 +463,10 @@
         <div class="contact-info reveal">
           <div class="contact-item">
             <div class="contact-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
             </div>
             <div>
               <span class="ci-label">Email</span>
@@ -360,7 +475,10 @@
           </div>
           <div class="contact-item">
             <div class="contact-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
             </div>
             <div>
               <span class="ci-label">Location</span>
@@ -369,16 +487,28 @@
           </div>
           <div class="social-links">
             <a href="#" class="social-btn" aria-label="GitHub">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
             </a>
             <a href="#" class="social-btn" aria-label="LinkedIn">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
             </a>
             <a href="#" class="social-btn" aria-label="Instagram">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+              </svg>
             </a>
             <a href="#" class="social-btn" aria-label="Twitter">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
             </a>
           </div>
         </div>
@@ -399,11 +529,15 @@
           </div>
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
+              required></textarea>
           </div>
           <button type="submit" class="btn-primary btn-submit" id="submitBtn">
             <span>Send Message</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="22" y1="2" x2="11" y2="13" />
+              <polygon points="22 2 15 22 11 13 2 9 22 2" />
+            </svg>
           </button>
         </form>
       </div>
@@ -416,16 +550,22 @@
       <div class="footer-logo">
         <span class="logo-bracket">&lt;</span>Chethan<span class="logo-bracket">/&gt;</span>
       </div>
-      <p>Crafted with ❤️ and a lot of ☕ — © 2024 Chethan. All rights reserved.</p>
+      <p></p>
+
       <div class="footer-links">
         <a href="#hero">Home</a>
-        <a href="#about">About</a>
+        <a href="#about">About Me</a>
+        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </div>
+
+    </div>
     </div>
   </footer>
 
   <script src="main.js"></script>
 </body>
+
 </html>
