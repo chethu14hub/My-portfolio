@@ -314,7 +314,7 @@ function initCursorGlow() {
    TILT EFFECT
    ─────────────────────────────────────────── */
 function initTilt() {
-  document.querySelectorAll('.project-card, .skill-card').forEach(card => {
+  document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
       const dx = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
@@ -322,6 +322,57 @@ function initTilt() {
       card.style.transform = `perspective(800px) rotateY(${dx * 6}deg) rotateX(${-dy * 6}deg) translateY(-4px)`;
     });
     card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+  });
+
+  // Skill cards come-front 3D hover tilt
+  document.querySelectorAll('.skill-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const dx = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+      const dy = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+      card.style.transform = `perspective(800px) rotateY(${dx * 7}deg) rotateX(${-dy * 7}deg) translateY(-10px) scale(1.05)`;
+      card.style.zIndex = '35';
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+      card.style.zIndex = '';
+    });
+  });
+}
+
+/* ─────────────────────────────────────────────
+   SKILL CATEGORY FILTER
+   ─────────────────────────────────────────── */
+function initSkillFilter() {
+  const btns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.skill-card');
+  if (!btns.length || !cards.length) return;
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+
+      cards.forEach(card => {
+        const cat = card.dataset.category;
+        if (filter === 'all' || cat === filter) {
+          card.style.display = 'flex';
+          requestAnimationFrame(() => {
+            card.style.opacity = '1';
+            card.style.transform = '';
+          });
+        } else {
+          card.style.opacity = '0';
+          card.style.transform = 'scale(0.92)';
+          setTimeout(() => {
+            if (btn.classList.contains('active') && btn.dataset.filter !== 'all' && card.dataset.category !== btn.dataset.filter) {
+              card.style.display = 'none';
+            }
+          }, 250);
+        }
+      });
+    });
   });
 }
 
@@ -369,7 +420,7 @@ function initSmoothScroll() {
    TYPEWRITER (hero role)
    ─────────────────────────────────────────── */
 function initTypeWriter() {
-  const roles = ['UI/UX Designer', 'Graphic Designer', 'Frontend Developer', 'Vibe Coder'];
+  const roles = ['React Developer', 'Vibe Coder', 'Graphic Designer', 'Videographer & Editor', 'UI/UX Designer'];
   const el = document.querySelector('.hero-title .line-reveal:last-child');
   if (!el) return;
 
@@ -401,6 +452,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCounters();
   initCursorGlow();
   initTilt();
+  initSkillFilter();
   initForm();
   initSmoothScroll();
   initTypeWriter();
