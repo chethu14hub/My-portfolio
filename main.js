@@ -457,3 +457,56 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initTypeWriter();
 });
+// DESIGN PROJECTS 3D CAROUSEL
+
+const carousel = document.getElementById("designCarousel");
+
+if (carousel) {
+  const cards = carousel.querySelectorAll(".design-card");
+  let activeIndex = 0;
+
+  function updateCarousel() {
+    const total = cards.length;
+
+    cards.forEach((card, index) => {
+      let offset = index - activeIndex;
+
+      if (offset > total / 2) offset -= total;
+      if (offset < -total / 2) offset += total;
+
+      const distance = Math.abs(offset);
+
+      const x = offset * 220;
+      const z = -distance * 100;
+      const rotateY = offset * -12;
+      const scale = Math.max(0.55, 1 - distance * 0.12);
+
+      card.style.transform = `
+  translate(-50%, -50%)
+  translateX(${x}px)
+  translateZ(${z}px)
+  rotateY(${rotateY}deg)
+  scale(${scale})
+`;
+
+      card.style.filter =
+        distance === 0 ? "blur(0px)" : `blur(${Math.min(distance * 2, 5)}px)`;
+
+      card.style.opacity = distance > 4 ? "0" : "1";
+      card.style.zIndex = total - distance;
+    });
+  }
+
+  carousel.addEventListener("wheel", (event) => {
+    event.preventDefault();
+
+    activeIndex += event.deltaY > 0 ? 1 : -1;
+
+    if (activeIndex >= cards.length) activeIndex = 0;
+    if (activeIndex < 0) activeIndex = cards.length - 1;
+
+    updateCarousel();
+  }, { passive: false });
+
+  updateCarousel();
+}
